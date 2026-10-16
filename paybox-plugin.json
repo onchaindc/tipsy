@@ -1,0 +1,8 @@
+{
+  "tool": "pay_creator",
+  "arguments": {
+    "handle": "paybox",
+    "recipient": "0x1111111111111111111111111111111111111111",
+    "amount": "0.05"
+  }
+}
