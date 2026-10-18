@@ -1,0 +1,11 @@
+# Denote file conventions, will never be shown in PRs
+text eol=lf
+
+# Source files
+*.ts text
+*.mjs text
+*.json text
+*.md text
+# Built artifact gets opaque, non-diffable bytes via LFS-like handling: keep it binary-ish
+plugin.mjs binary
+dist/plugin.mjs binary
