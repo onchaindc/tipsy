@@ -1,4 +1,4 @@
-# Tipsy — a PayBox plugin by Tipsy
+# Tipsy
 
 A [PayBox](https://paybox.sh) plugin that lets an AI agent pay a creator in USDC on Base and commission artwork from Suede AI — with the human always in the approval loop.
 
@@ -6,7 +6,7 @@ A [PayBox](https://paybox.sh) plugin that lets an AI agent pay a creator in USDC
 
 | Tool | What it does | Payment |
 |---|---|---|
-| `pay_creator` | Proposes an Base USDC (ERC-20) transfer to a recipient wallet, with an X @handle as a display label only | Real transfer, once approved |
+| `pay_creator` | Proposes a Base USDC (ERC-20) transfer to a recipient wallet, with an X @handle as a display label only | Real transfer, once approved |
 | `create_creator_asset` | Proposes a paid x402 image-generation request to Suede AI's `app.suedeai.ai/agent/image` endpoint | Real x402 charge (price discovered live from the provider's challenge) |
 
 Neither tool signs, sends, or confirms anything by itself. PayBox holds the wallets, validates each proposal against the payment rails, and requires the user's explicit approval before money moves.
@@ -43,7 +43,7 @@ scripts/      — starter conformance harness (unmodified starter code)
 tests/        — unit tests for the pure logic
 ```
 
-The plugin is a single-file artifact served over stdio: build it with `pnpm test` (which also re-runs the conformance audit), or with `pnpm build` if you just want `dist/plugin.mjs` fresh.
+The plugin is a single-file artifact served over stdio: build it with `pnpm build`, or run `pnpm test` for the byte-identical rebuild plus the conformance audit in one step.
 
 ## Uploading to PayBox
 
